@@ -18,13 +18,18 @@ pipeline {
 		    }
 	    }
 
-        stage('Maven Clean Package') {
-           steps {
-			def mavenHome =  tool name: "Maven", type: "maven"
-            def mavenCMD = "${mavenHome}/bin/mvn"
-            sh "${mavenCMD} clean package"
-        }
-		}
+           stage('Build') {
+		    steps {
+			    sh 'mvn clean package'
+		    }
+	    }
+	    
+	    stage('Test') {
+		    steps {
+			    echo "Testing..."
+			    sh 'mvn test'
+		    }
+	    }
 	    
 	     stage('Build Docker Image') {
 		    steps {
