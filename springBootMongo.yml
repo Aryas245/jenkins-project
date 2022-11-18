@@ -109,11 +109,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp
+  name: springboot
 spec:
   type: LoadBalancer
   selector:
-    app: myapp
+    app: springboot
   ports:
     - protocol: TCP
       port: 80
