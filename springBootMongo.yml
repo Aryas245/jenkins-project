@@ -105,3 +105,17 @@ spec:
     targetPort: 27017
   selector:
     app: mongo
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp
+spec:
+  type: LoadBalancer
+  selector:
+    app: myapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
