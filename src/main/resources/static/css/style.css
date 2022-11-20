@@ -1,0 +1,116 @@
+/**
+* Template Name: Instant
+* Template URL: https://templatemag.com/instant-bootstrap-personal-template/
+* Author: TemplateMag.com
+* License: https://templatemag.com/license/
+*/
+
+/* ==========================================================================
+   Base Styles, Bootstrap Modifications & Fonts Import
+   ========================================================================== */
+
+
+::-moz-selection {
+    background: #f2c2c9;
+    color: #a4003a;
+    text-shadow: none;
+}
+
+::selection {
+    background: #16a085;
+    color: #a4003a;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.centered {
+	text-align: center
+}
+
+.mt {
+	margin-top: 80px;
+}
+
+.mb {
+	margin-bottom: 80px;
+}
+
+/* ==========================================================================
+   General styles
+   ========================================================================== */
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* Contact Form */
+
+#contactwrap {
+	background: url(../img/contact.jpg) no-repeat center top;
+	margin-top: -160px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+  background-size: 100%;
+  background-size: cover;
+}
+
+#contactwrap h1 {
+	color:#ffffff;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	letter-spacing: 4px;
+	font-size: 60px;
+	font-weight: bold;
+}
+
+
+.form-group{
+  color: #ffffff;
+  
+  
+
+}
+#usersTable{
+  color: white;
+  margin-left: 0px;
+}
+
+.user{
+  color: #ffffff;
+  margin-left:90px;
+}
+
+.naina{
+  margin-left: 275px;
+  
+}
+
+
+
+
+
+
+
