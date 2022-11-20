@@ -59,7 +59,7 @@ pipeline {
 			    sh 'ls -ltr'
 			    sh 'pwd'
 			    sh "sed -i 's/tagversion/${env.BUILD_ID}/g' springBootMongo.yml"
-				sh "sed -i 's/tagversion/${env.BUILD_ID}/g' springBootMongoLB.yml"
+				/**sh "sed -i 's/tagversion/${env.BUILD_ID}/g' springBootMongoLB.yml"**/
 			    echo "Start deployment of springBootMongo.yml"
 			    step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'springBootMongo.yml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
 			    /**echo "Start deployment springBootMongoLB.yml"
