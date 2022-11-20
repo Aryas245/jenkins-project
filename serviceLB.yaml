@@ -4,19 +4,19 @@ kind: Deployment
 metadata:
  name: springboot-loadbalancer
  labels:
-  app: myapp-app-loadbalancer
+  app: springboot
 spec:
  replicas: 1
  selector:
   matchLabels:
-   app: myapp-app-loadbalancer
+   app: springboot
  template:
   metadata: 
    labels:
-    app: myapp-app-loadbalancer
+    app: springboot
   spec:
    containers:
-   - name: myapp-app-loadbalancer
+   - name: springboot-loadbalancer
      image: aryas13/jenkins_project:tagversion
      ports:
      - containerPort: 8080
@@ -29,7 +29,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: myapp-app-loadbalancer
+    app: springboot
   ports:
     - protocol: TCP
       port: 80
