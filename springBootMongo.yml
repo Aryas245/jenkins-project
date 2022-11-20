@@ -31,15 +31,16 @@ spec:
         - name: MONGO_DB_HOSTNAME
           value: mongo
         - name: MONGO_INITDB_ROOT_USERNAME
-          valueFrom:
-            configMapKeyRef:
-              name: springapp-configmap
-              key: username 
+          value: devdb
+          #valueFrom:
+            #configMapKeyRef:
+             # name: springapp-configmap
+              #key: username 
         - name: MONGO_INITDB_ROOT_PASSWORD
-          valueFrom:
-            configMapKeyRef:
-              name: springapp-configmap
-              key: password       
+           value: devdb123
+          # configMapKeyRef:
+           #   name: springapp-configmap
+            #  key: password       
 ---
 # Node Port Service For SpringApp
 apiVersion: v1
@@ -74,15 +75,17 @@ spec:
         name: mongo
         env:
         - name: MONGO_INITDB_ROOT_USERNAME
-          valueFrom:
-            configMapKeyRef:
-              name: springapp-configmap
-              key: username 
+          value: devdb
+          #valueFrom:
+           # configMapKeyRef:
+            #  name: springapp-configmap
+            #  key: username 
         - name: MONGO_INITDB_ROOT_PASSWORD
-          valueFrom:
-            configMapKeyRef:
-              name: springapp-configmap
-              key: password 
+           value: devdb123
+          #valueFrom:
+           # configMapKeyRef:
+            #  name: springapp-configmap
+             # key: password 
         ports:
         - containerPort: 27017
         volumeMounts:
