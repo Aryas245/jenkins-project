@@ -21,7 +21,7 @@ public class DemoApp {
     }
 
     @RequestMapping("/")
-    public String index() {
-        return "index.html";
+    public String ajout() {
+        return "ajout.html";
     }
 }
